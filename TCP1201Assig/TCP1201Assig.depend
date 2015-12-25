@@ -1,0 +1,48 @@
+# depslib dependency file v1.0
+1449474312 source:c:\users\student\desktop\tcp1201assig\main.cpp
+	<iostream>
+	<vector>
+	"Ultility.h"
+
+1449474391 source:c:\users\student\desktop\tcp1201assig\src\city.cpp
+	"City.h"
+	"Attraction.h"
+
+1449474711 c:\users\student\desktop\tcp1201assig\include\city.h
+	<iostream>
+	<string>
+	<vector>
+
+1449470241 source:c:\users\student\desktop\tcp1201assig\src\attraction.cpp
+	"Attraction.h"
+
+1449470236 c:\users\student\desktop\tcp1201assig\include\attraction.h
+	<string>
+
+1449469977 source:c:\users\student\desktop\tcp1201assig\src\culture.cpp
+	"Culture.h"
+
+1449470107 c:\users\student\desktop\tcp1201assig\include\culture.h
+	"Attraction.h"
+
+1449469997 source:c:\users\student\desktop\tcp1201assig\src\shopping.cpp
+	"Shopping.h"
+
+1449470134 c:\users\student\desktop\tcp1201assig\include\shopping.h
+	<vector>
+	<string>
+	"Attraction.h"
+
+1449469941 source:c:\users\student\desktop\tcp1201assig\src\sport.cpp
+	"Sport.h"
+
+1449470134 c:\users\student\desktop\tcp1201assig\include\sport.h
+	"Attraction.h"
+
+1449472637 source:c:\users\student\desktop\tcp1201assig\src\ultility.cpp
+	"Ultility.h"
+
+1449472479 c:\users\student\desktop\tcp1201assig\include\ultility.h
+	<vector>
+	"City.h"
+
