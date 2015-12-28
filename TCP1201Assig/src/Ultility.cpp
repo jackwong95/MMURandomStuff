@@ -13,7 +13,7 @@ void Ultility::displayCity(vector<City*>* cities, int idx)
 
 void Ultility::displayCity(vector<City*>* cities)
 {
-    for(int i = 0; i < cities->size(); i ++)
+    for(int i = 0; i < (int)cities->size(); i ++)
     {
         City* tempCity = cities->at(i);
         displayCityDetails(tempCity);

@@ -3,12 +3,14 @@
 
 #include "Attraction.h"
 
-class Culture : private Attraction
+class Culture : public Attraction
 {
     public:
-        Culture();
+        Culture(int _id = -1, int _typeID = -1, double entranceFee = 0.0d, string _name="Untitled");
         virtual ~Culture();
-    protected:
+        void display();
+        void setEntranceFee(double entranceFee);
+        double getEntranceFee() {return entranceFee;}
     private:
         double entranceFee;
 };

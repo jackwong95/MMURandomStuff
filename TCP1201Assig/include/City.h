@@ -5,27 +5,26 @@
 
 #include <string>
 #include <vector>
+#include "Attraction.h"
 
 using namespace std;
-
-class Attraction;
 
 class City
 {
     public:
-        static int globalCityID;
-        City(int _population=-1, int _touristNumber=-1, int _numberOfAttractions=-1, string _name="Untitled");
+        City(int _id = -1, string _name="Untitled");
         virtual ~City();
         void display();
         void setID(int x);
-    protected:
+        void setName(string name);
+        void addAttraction(Attraction* att);
+        vector<Attraction*> getAttraction(){return attractions;}
+        int getID(){ return id; }
+        string getName(){ return name; }
     private:
         int id;
-        int population;
-        int touristNumber;
-        int numberOfAttractions;
         string name;
-        vector<Attraction>* attractions;
+        vector<Attraction*> attractions;
 };
 
 #endif // CITY_H

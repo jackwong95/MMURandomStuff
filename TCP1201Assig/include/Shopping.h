@@ -8,14 +8,17 @@
 
 using namespace std;
 
-class Shopping : private Attraction
+class Shopping : public Attraction
 {
     public:
-        Shopping();
+        Shopping(int _id = -1, int _typeID = -1, string _name="Untitled");
         virtual ~Shopping();
-    protected:
+        void display();
+        void addMall(string toAdd);
+        void removeMall(string toRemove);
+        vector<string> getMalls() {return malls;}
     private:
-        vector<string>* Malls;
+        vector<string> malls;
 
 };
 
