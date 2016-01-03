@@ -1,0 +1,4 @@
+=*******************~BOARD~*******************=
+
+? means all the possible/legal moves for the current player.
+

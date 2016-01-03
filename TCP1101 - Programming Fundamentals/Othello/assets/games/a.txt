@@ -1,0 +1,14 @@
+current player, O
+super1O, true
+super2O, false
+super1X, false
+super2X, true
+board
+X, O, O, O, O, O, O, O
+X, O, X, X, O, S, S, S
+X, O, X, X, O, S, S, S
+X, O, O, O, O, S, S, S
+X, O, O, O, O, S, S, S
+X, O, O, O, O, S, S, S
+X, O, O, X, O, S, S, S
+X, X, X, X, X, X, X, S

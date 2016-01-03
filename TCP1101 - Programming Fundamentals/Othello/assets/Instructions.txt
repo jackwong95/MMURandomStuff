@@ -1,0 +1,33 @@
+------------------------EXPLAINATION PAGE------------------------
+
+This game is made by jack, aka. Wong Tiong Kiat. 
+When a menu is shown select the value of operation you want to perform.
+When starting the game you'll be redirected to the menu which looks like this :
+
+And you'll be given a list of the operations you can perform.
+
+==>   new game - To create a new game.
+==>   help - To understand command and how to use this program.
+==>   quit - Quit the game.
+==>   resume game - Resume your previous game if there are any.
+==>   clear console - Clear this output screen.
+==>   load filename.txt - Load a game.
+
+Lets say If I want to start a new game as shown in the menu selection.
+I'll type in the value 'operational name' and press enter.
+
+When the game started you'll be redirected to another game menu which looks like this : 
+
+=*******************~GAME MENU~*******************=
+
+And you'll be given a list of the operations you can perform.
+
+==> f 4 - To move a piece at the board. NOTE: You can only place it with the symbol ?, ? means the moves that is available and legal to that player.
+==> save filename.txt - To save a file.
+==> menu - To go back to menu.
+==> next player - To skip to next player.
+==> super1 f 4 - Use super power 1, flips board at all direction given a legit move.
+==> super2 flip - Use super power 2, reverse the entire board.
+==> Clear console - Clear this output screen.
+
+------------------------EXPLAINATION PAGE ENDS HERE------------------------

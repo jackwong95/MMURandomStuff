@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="NewOthello" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/NewOthello" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+					<Add directory="include" />
+					<Add directory="include/model" />
+					<Add directory="include/view" />
+					<Add directory="include/controller" />
+					<Add directory="include/command" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/NewOthello" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add directory="include" />
+					<Add directory="include/model" />
+					<Add directory="include/view" />
+					<Add directory="include/controller" />
+					<Add directory="include/command" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-fexceptions" />
+		</Compiler>
+		<Unit filename="include/Ultis.h" />
+		<Unit filename="include/command/ClearConsoleCommand.h" />
+		<Unit filename="include/command/Command.h" />
+		<Unit filename="include/command/GameCommand.h" />
+		<Unit filename="include/command/HelpCommand.h" />
+		<Unit filename="include/command/LoadFileCommand.h" />
+		<Unit filename="include/command/MenuCommand.h" />
+		<Unit filename="include/command/MoveEnemyUnitRandomly.h" />
+		<Unit filename="include/command/MoveUnitCommand.h" />
+		<Unit filename="include/command/NextPlayerCommand.h" />
+		<Unit filename="include/command/QuitCommand.h" />
+		<Unit filename="include/command/ResumeGameCommand.h" />
+		<Unit filename="include/command/ReverseCommand.h" />
+		<Unit filename="include/command/SaveFileCommand.h" />
+		<Unit filename="include/controller/GameController.h" />
+		<Unit filename="include/controller/GameInputHandler.h" />
+		<Unit filename="include/controller/MenuController.h" />
+		<Unit filename="include/controller/MenuInputHandler.h" />
+		<Unit filename="include/model/Board.h" />
+		<Unit filename="include/model/BoardType.h" />
+		<Unit filename="include/model/FileReader.h" />
+		<Unit filename="include/model/FileWriter.h" />
+		<Unit filename="include/view/BannerView.h" />
+		<Unit filename="include/view/GameView.h" />
+		<Unit filename="include/view/HelpView.h" />
+		<Unit filename="include/view/MenuView.h" />
+		<Unit filename="include/view/View.h" />
+		<Unit filename="main.cpp" />
+		<Unit filename="src/Ultis.cpp" />
+		<Unit filename="src/controller/GameController.cpp" />
+		<Unit filename="src/controller/GameInputHandler.cpp" />
+		<Unit filename="src/controller/MenuController.cpp" />
+		<Unit filename="src/controller/MenuInputHandler.cpp" />
+		<Unit filename="src/model/Board.cpp" />
+		<Unit filename="src/model/FileReader.cpp" />
+		<Unit filename="src/model/FileWriter.cpp" />
+		<Unit filename="src/view/BannerView.cpp" />
+		<Unit filename="src/view/GameView.cpp" />
+		<Unit filename="src/view/HelpView.cpp" />
+		<Unit filename="src/view/MenuView.cpp" />
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

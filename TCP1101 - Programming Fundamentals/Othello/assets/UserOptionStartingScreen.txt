@@ -1,0 +1,9 @@
+==>  new game
+==>  help
+==>  quit
+==>  resume game
+==>  clear console
+==>  load filename.txt
+
+Please type the operation name.
+Example 'new game'

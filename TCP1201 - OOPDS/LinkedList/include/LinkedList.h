@@ -24,7 +24,7 @@ class LinkedList
         {
         }
 
-        void push_back(T item)
+        void push_tail(T item)
         {
             Node<T>* newNode = new Node<T>;
             newNode->item = item;
@@ -51,7 +51,7 @@ class LinkedList
             }
         }
 
-        void remove(int _idx)
+        void removeAt(int _idx)
         {
             if(_idx >= 0 && _idx <= (N-1))
             {
@@ -78,23 +78,7 @@ class LinkedList
             }
         }
 
-        Node<T>* getNode(int i)
-        {
-            if(i >= 0 && i <= (N-1))
-            {
-                int idx = 0;
-                Node<T>* currNode = headNode;
-                while(currNode != nullptr)
-                {
-                    if(idx == i) return currNode;
-                    idx ++;
-                    currNode = currNode->next;
-                }
-            }
-            return nullptr;
-        }
-
-        T* at(int i)
+        T& getAt(int i)
         {
             if(i >= 0 && i <= (N-1))
             {
@@ -110,6 +94,24 @@ class LinkedList
             return nullptr;
         }
 
+        void setAt(int i, T item)
+        {
+            if(i >= 0 && i <= (N-1))
+            {
+                int idx = 0;
+                Node<T>* currNode = headNode;
+                while(currNode != nullptr)
+                {
+                    if(idx == i)
+                    {
+                        currNode.item = item;
+                        idx ++;
+                        currNode = currNode->next;
+                    }
+                }
+            }
+        }
+
         int findIdx(T item)
         {
             int idx = 0;
@@ -123,14 +125,30 @@ class LinkedList
             return -1;
         }
 
-        int size()
+        int sz()
         {
             return N;
         }
+    private:
         Node<T> *headNode = nullptr;
         Node<T> *tailNode = nullptr;
-    private:
         int N;
+
+        Node<T>* getNode(int i)
+        {
+            if(i >= 0 && i <= (N-1))
+            {
+                int idx = 0;
+                Node<T>* currNode = headNode;
+                while(currNode != nullptr)
+                {
+                    if(idx == i) return currNode;
+                    idx ++;
+                    currNode = currNode->next;
+                }
+            }
+            return nullptr;
+        }
 };
 
 #endif // LINKEDLIST_H
