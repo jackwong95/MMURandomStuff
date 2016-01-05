@@ -175,6 +175,8 @@ class LinkedList
                     {
                         Node<T>* previousNode = getNode(idx-1);
                         previousNode->next = currNode->next;
+                        delete currNode;
+                        currNode = nullptr;
                         N--;
                         return;
                     }
