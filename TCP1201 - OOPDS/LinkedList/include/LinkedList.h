@@ -186,7 +186,7 @@ class LinkedList
             }
         }
 
-        T& getAt(int i)
+        T& at(int i)
         {
             if(i >= 0 && i <= (N-1))
             {

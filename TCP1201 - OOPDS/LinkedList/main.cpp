@@ -1,8 +1,9 @@
 #include <iostream>
 #include "LinkedList.h"
-
+#include <string>
 using namespace std;
 
+/*
 int main()
 {
     LinkedList<int> ll;
@@ -33,4 +34,33 @@ int main()
     ll.display();
     ll.clr();
     return 0;
+}*/
+
+class A
+{
+public:
+    int a;
+    char b;
+    string s;
+
+    ostream& operator<< (ostream &os)
+    {
+        os << this->a << " " << this->b << endl;
+        return os;
+    }
+};
+/*
+ostream& operator<< (ostream& os, A obj1)
+{
+    os << obj1.a << " " << obj1.b << " " << obj1.s << endl;
+    return os;
+}
+*/
+
+int main()
+{
+    LinkedList<A> list1;
+    list1.reserve_from_head(10);
+    for (int i = 0; i < list1.sz(); i++) cout << list1.getAt(i) << endl;
+    //list1.display();
 }
