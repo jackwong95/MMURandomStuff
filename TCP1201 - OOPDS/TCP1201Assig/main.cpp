@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include <stack>
 #include <string>
 #include "City.h"
 #include "Attraction.h"
@@ -107,6 +108,83 @@ void attractionSelection(City* city)
     }
 }
 
+City* getCityByID(vector<City> cities, int id)
+{
+    for(int i = 0; i < cities.size(); i ++)
+    {
+        if(cities[i].getID()==id)
+        {
+            return &cities[i];
+        }
+    }
+    return nullptr;
+}
+
+bool isCityWithinTheVector(vector<City*>* cities, int id)
+{
+    for(int i = 0; i < cities->size(); i ++)
+    {
+        if(cities->at(i)->getID()==id)
+        {
+            return true;
+        }
+    }
+    return false;
+}
+
+void connect(City* c1, City* c2)
+{
+    c1->connections->push_back(c2->getID());
+    c2->connections->push_back(c1->getID());
+}
+
+bool isConnected(vector<City> cities, vector<City*>* visitedCities, stack<City*>* trace, City* toFind)
+{
+
+    City* root;
+    if(!trace->empty())
+    {
+        root = trace->top();
+        trace->pop();
+        visitedCities->push_back(root);
+        //cout << "Current root name : " << root->getName() << endl;
+        if(root->getID()==toFind->getID())
+        {
+            //cout << "Returned true " << root->getName() << " " << root->getID() << endl;
+            //cout << "Returned true " << toFind->getName() << " " << toFind->getID() << endl;
+            return true;
+        }
+    }else if(trace->empty())
+    {
+        //cout << "Stack is empty " << endl;
+        return false;
+    }
+
+    for(int i = 0; i < root->connections->size(); i ++)
+    {
+        //cout << "Connections of ID : " << root->connections->at(i) << endl;
+        if(!isCityWithinTheVector(visitedCities, root->connections->at(i)))
+        {
+            trace->push(getCityByID(cities, root->connections->at(i)));
+        }
+        if(isConnected(cities, visitedCities, trace, toFind)) return true;
+    }
+    return false;
+}
+
+bool isConnected(vector<City> cities, City* root, City* toFind)
+{
+    if(root == nullptr || toFind == nullptr )
+    {
+        cout << "Null pointer paramter given at isConnected function."<<endl;
+        return false;
+    }
+    vector<City*>* visitedCities = new vector<City*>;
+    stack<City*>* trace = new stack<City*>;
+    trace->push(root);
+    return isConnected(cities, visitedCities, trace, toFind);
+}
+
 int main()
 {
     ///TYPEID 1 = Sport
@@ -178,6 +256,7 @@ int main()
     City c3(300, "City three");
     City c4(400, "City four");
     */
+
     while(true)
     {
         bool hasSelectedCity = false, toLoop = true;
@@ -189,5 +268,79 @@ int main()
         }
         if(!toLoop)break;
     }
+
+    ///all IDs have to be unique for this to work, because i'm too lazy of think of any other way.
+    City A(1, "A");
+    City B(2, "B");
+    City C(3, "C");
+    City D(4, "D");
+    City E(5, "E");
+    City F(6, "F");
+    City G(7, "G");
+    City H(8, "H");
+
+    ///store all of these cities into a vector
+    vector<City> cities;
+    cities.push_back(A);
+    cities.push_back(B);
+    cities.push_back(C);
+    cities.push_back(D);
+    cities.push_back(E);
+    cities.push_back(F);
+    cities.push_back(G);
+    cities.push_back(H);
+
+    ///set up all of connections
+    ///if A is connected to B, B is also said to be connected to A
+    connect(&A, &B);
+    connect(&A, &D);
+    connect(&A, &E);
+    connect(&D, &B);
+    connect(&D, &E);
+    connect(&B, &C);
+    connect(&E, &C);
+    connect(&C, &H);
+
+    ///cities is the cities you want to check, and input are 2 cities
+    bool isAConnectedToF = isConnected(cities, &A, &F);
+    if(isAConnectedToF)
+    {
+        cout << "City A is Connected To City F" << endl;
+    }
+    else
+    {
+        cout << "City A is Not Connected To City F" << endl;
+    }
+
+    bool isAConnectedToB = isConnected(cities, &A, &B);
+    if(isAConnectedToB)
+    {
+        cout << "City A is Connected To City B" << endl;
+    }
+    else
+    {
+        cout << "City A is Not Connected To City B" << endl;
+    }
+
+    bool isAConnectedToH = isConnected(cities, &A, &H);
+    if(isAConnectedToH)
+    {
+        cout << "City A is Connected To City H" << endl;
+    }
+    else
+    {
+        cout << "City A is Not Connected To City H" << endl;
+    }
+
+    bool isAConnectedToA = isConnected(cities, &A, &A);
+    if(isAConnectedToH)
+    {
+        cout << "City A is Connected To City A" << endl;
+    }
+    else
+    {
+        cout << "City A is Not Connected To City A" << endl;
+    }
+
     return 0;
 }

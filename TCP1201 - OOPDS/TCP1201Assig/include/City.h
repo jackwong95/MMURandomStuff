@@ -21,6 +21,10 @@ class City
         vector<Attraction*> getAttraction(){return attractions;}
         int getID(){ return id; }
         string getName(){ return name; }
+        ///create a city getter and setter for vector of connection here
+        ///fuck cares about encapsulation rules and all that bullshit too troublesome..
+        ///lazy to do.
+        vector<int>* connections;
     private:
         int id;
         string name;

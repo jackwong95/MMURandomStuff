@@ -5,6 +5,7 @@
 City::City(int _id, string _name) :
     id(_id), name(_name)
 {
+    connections = new vector<int>();
 }
 
 void City::setID(int x)
