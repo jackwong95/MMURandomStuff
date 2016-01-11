@@ -13,7 +13,7 @@
 
 7) **Renaming your variables** will not reduce the plagiarism rate.
 
-8) The **Plagiarism rate** will most likely be high if your program flow is close to mine.
+8) The **plagiarism rate** will most likely be high if your program flow is close to mine.
 
 
 # WARNING
