@@ -1,0 +1,2 @@
+# MMURandomStuff
+THIS REPOSITORY SOLELY FOR REFERENTIAL PURPOSES. DO NOT PLAGIARIZE(COPY AND PASTE) the code under repository if you're taking the same course as I'm currently taking otherwise you. This repository is dedicated solely to help students who are having trouble understanding or wanting to improve their existing code. I do not promote plagiarism as it's the worse thing that can happen to the author, I will not hold responsible for anyone who copy and paste the code.
