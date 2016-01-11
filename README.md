@@ -1,5 +1,5 @@
 # MMURandomStuff
-1) THIS REPOSITORY SOLELY FOR REFERENTIAL PURPOSES. 
+1) THIS REPOSITORY SOLELY FOR REFERENTIAL PURPOSES.\n
 2) DO NOT PLAGIARIZE(COPY AND PASTE) the code under repository if you're taking the same course as I'm currently taking.
 3) This repository is dedicated solely to help students who are having trouble understanding or wanting to improve their existing code. 
 4) I do not promote plagiarism as it's the worse thing that can happen to the author.
