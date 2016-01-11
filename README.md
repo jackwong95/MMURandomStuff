@@ -11,6 +11,11 @@
 
 6) You're allowed to do anything to this repository **IF AND ONLY IF** you're not taking the same course as I'm on the current same semester.
 
+7) **Renaming your variables** will not reduce the plagiarism rate.
+
+8) The **Plagiarism rate** will most likely be very high if your program is very close to mine.
+
 
 # WARNING
-*THIS IS NOTHING LIKE MY SUBMISSION CODE, THEREFORE COPYING IT AS IT IS WILL NOT AFFECT ME BUT WILL AFFECT YOURSELF.*
+*THIS IS NOTHING LIKE MY SUBMISSION CODE, 
+THEREFORE COPYING IT AS IT IS WILL NOT AFFECT ME BUT WILL AFFECT YOURSELF.*
