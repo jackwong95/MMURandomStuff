@@ -1,7 +1,4 @@
 # MMURandomStuff
-<<<<<<< HEAD
-Do whatever you want with this repository.
-=======
 1) This repository is solely for **REFERENTIAL PURPOSES**.
 
 2) **DO NOT PLAGIARIZE(COPY AND PASTE)** the code under repository if you're taking the same course as I'm currently taking.
@@ -23,4 +20,3 @@ Do whatever you want with this repository.
 THIS IS NOTHING LIKE MY SUBMISSION CODE
 
 THEREFORE COPYING IT AS IT IS WILL NOT AFFECT ME BUT WILL AFFECT YOURSELF.
->>>>>>> 3a8c6028913f39cd5b8b72d7c24f5ef71180e1c5
