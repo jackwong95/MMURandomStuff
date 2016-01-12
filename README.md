@@ -25,4 +25,4 @@ THEREFORE COPYING IT AS IT IS WILL NOT AFFECT ME BUT WILL AFFECT YOURSELF.
 
 # EXTRAS
 Lazy to do assignment ? Check out my assignment helping service
-https://github.com/jackwong95/MMURandomStuff/blob/master/AssignmentHelp
+https://github.com/jackwong95/MMURandomStuff/blob/master/AssignmentHelp.MD
