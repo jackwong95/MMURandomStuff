@@ -23,12 +23,20 @@ So therefore, think of this as a low-risk gamble for your final score.
 
 I will decline to offer my service, if I do not understand parts of the assignment or if I do not feel confident enough to achieve the final outcome.
 
+# Details
+
 Minimum charge : RM 100 per assignment
+
 Maximum charge : depending on the difficulty of the assignment
+
 Duration : 1 week before the submission depending of the subject
+
 Subject Availability : Programming Fundamentals, OOPDS
 
+Payment will only be made in real life through cash
 
 Contact details :
+
 email : jackwongtiongkiat@gmail.com
+
 facebook : https://www.facebook.com/wong.t.kiat
