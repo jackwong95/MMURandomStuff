@@ -29,7 +29,7 @@ Minimum charge : RM 100 per assignment
 
 Maximum charge : depending on the difficulty of the assignment
 
-Duration : 1 week before the submission depending of the subject
+Minimum Duration : 1 week or more before the submission depending of the subject
 
 Subject Availability : Programming Fundamentals, OOPDS
 
