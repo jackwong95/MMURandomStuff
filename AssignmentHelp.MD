@@ -13,6 +13,16 @@ If you're too lazy to do assignment and is looking for someone to do it for you,
 3) I can finish on the spot depending on the difficulty of the task.
 
 
+# Warnings
+
+I cannot guarantee what the final result might be, but what is given by the official lecturer is the final result.
+
+So therefore, think of this as a low-risk gamble for your final score.
+
+**Although rare**, but the result of my program maybe below average depending on each lecturer's marking.
+
+I will decline to offer my service, if I do not understand parts of the assignment or if I do not feel confident enough to achieve the final outcome.
+
 Minimum charge : RM 100 per assignment
 Maximum charge : depending on the difficulty of the assignment
 Duration : 1 week before the submission depending of the subject
