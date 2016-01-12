@@ -1,4 +1,5 @@
-# MMURandomStuff
+# RULES
+
 1) This repository is solely for **REFERENTIAL PURPOSES**.
 
 2) **DO NOT PLAGIARIZE(COPY AND PASTE)** the code under repository if you're taking the same course as I'm currently taking.
@@ -20,3 +21,8 @@
 THIS IS NOTHING LIKE MY SUBMISSION CODE
 
 THEREFORE COPYING IT AS IT IS WILL NOT AFFECT ME BUT WILL AFFECT YOURSELF.
+
+
+# EXTRAS
+Lazy to do assignment ? Check out my assignment helping service
+https://github.com/jackwong95/MMURandomStuff/blob/master/AssignmentHelp
