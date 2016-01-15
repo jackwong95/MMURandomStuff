@@ -119,6 +119,23 @@ UPDATE item
 SET item_bal = (item_bal + 5)
 WHERE item_type = 'Electrical';
 
+ANSWER FOR G
+
+CREATE TRIGGER m_trigger 
+AFTER INSERT ON invoice
+FOR EACH ROW MODE DB2SQL
+UPDATE invoice
+SET invoice_price =
+invoice_qty*(
+SELECT item_price FROM item WHERE invoice.item_id = item.item_id
+);
+
+ANSWER FOR H
+
+insert into buyer values(9,'Martin','61255643266','Active');
+insert into invoice(invoice_ID, invoice_date, buyer_id, invoice_qty, item_id, sales_id)
+values(10018,'2008-01-26',9,2,989,23598);
+
 BOTTOM LOWER QUESTION
 Q1 
 
