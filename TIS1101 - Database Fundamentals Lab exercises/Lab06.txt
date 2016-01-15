@@ -1,0 +1,151 @@
+CREATE DATABASE TUT05;
+CONNECT TO TUT05;
+
+CREATE TABLE sales
+(
+sales_id int not null,
+sales_name varchar(50),
+sales_phone varchar(20),
+primary key(sales_id)
+);
+
+CREATE TABLE BUYER
+(
+Buyer_ID int not null,
+Buyer_name varchar(50),
+Buyer_phone varchar(20),
+Buyer_status varchar(30) DEFAULT 'Active' CHECK (buyer_status IN ('Active' , 'Not Active')),
+primary KeY(Buyer_ID)
+);
+
+CREATE TABLE ITEM
+(
+Item_ID int not null PRIMARY KEY,
+item_NAME varchar(50),
+item_type varchar(20),
+item_price decimal(7,2),
+item_bal int,
+item_details varchar(100)
+);
+
+CREATE table Invoice
+(
+invoice_ID int not null primary key,
+invoice_date date,
+buyer_id int, 
+invoice_qty int,
+item_id int,
+sales_id int,
+FOREIGN KEY(buyer_id) REFERENCES buyer,
+FOREIGN KEY(item_id) REFERENCES item,
+FOREIGN KEY(sales_id) REFERENCES sales
+);
+
+insert into item values(659,'LCD monitor','Computer',900.99,50,'24 inch Samsung');
+insert into item values(965,'Pen','Stationary',1.64,3,'Red ink');
+insert into item values(855,'Printer','Computer',300.55,1,'Epson super jet');
+insert into item values(698,'Fan', 'Electrical', 86.11, 4,'Hitachi');
+insert into item values(598,'Rubber','Stationary',0.63,98,'Faber 3cm');
+insert into item values(456,'Hardisc','Computer',250.81,2,'Maxtor 500GB');
+insert into item values(879,'Pen Drive','Computer',98.65,78,'MyDrive 16GB mini version');
+insert into item values(989,'Nokia Phone','Electrical',980.21,100,'N85 super series');
+insert into item values(888,'Camera','Electrical',1230.36,8,'Sony 15 Megapixel');
+
+insert into sales values(56523,'Florence','60135698231');
+insert into sales values(23598,'Zelda','60125479563');
+insert into sales values(98665,'Clarry','60148597965');
+insert into sales values(13579,'Nasri','60195624664');
+insert into sales values(68595,'Arshavin','60168462649');
+
+insert into buyer values(1,'Jerremy','61255689766','Active');
+insert into buyer values(2,'Cech','60135695469','Not Active');
+insert into buyer values(3,'Meluda','60191346876','Active');
+insert into buyer values(4,'Jessica','60168954615','Active');
+insert into buyer values(5,'Toure','60136546586','Not Active');
+insert into buyer values(6,'Jesmon','60145226569','Active');
+insert into buyer values(7,'Torres','60125469788','Active');
+insert into buyer values(8,'Martin','60135468798','Not Active');
+insert into buyer values(9,'Taylor','60124659789','Active');
+
+insert into invoice values(10010,'2008-12-15',1,2,659,68595);
+insert into invoice values(10011,'2006-01-13',3,26,879,56523);
+insert into invoice values(10012,'2008-03-06',4,8,989,23598);
+insert into invoice values(10013,'2007-10-28',1,10,965,13579);
+insert into invoice values(10014,'2008-05-16',7,6,888,98665);
+insert into invoice values(10015,'2008-12-01',6,1,456,13579);
+insert into invoice values(10016,'2008-12-03',3,7,659,98665);
+
+ANSWER FOR A
+
+ALTER TABLE invoice
+ADD invoice_price decimal(10,2);
+
+ANSWER FOR B
+
+UPDATE invoice
+SET invoice_price = 
+invoice_qty*(
+SELECT item_price FROM item WHERE item.item_id = invoice.item_id
+);
+
+ANSWER FOR C
+
+SELECT item_name, MAX(item_price) AS price
+FROM item
+GROUP BY item_name;
+
+ANSWER FOR D
+
+SELECT COUNT(buyer_status) as active_buyer
+FROM buyer
+WHERE buyer_status='Active';
+
+ANSWER FOR E 
+
+SELECT invoice.item_id, SUM(invoice.invoice_qty * item.item_price) AS FINAL_QTY
+FROM invoice, item
+WHERE invoice.item_id = item.item_id AND invoice.invoice_qty >= 10
+GROUP BY invoice.item_id;
+
+OR 
+
+SELECT item_name, invoice_price
+FROM invoice, item
+WHERE invoice_qty >= 10 AND invoice.item_id = item.item_id;
+
+ANSWER FOR F
+
+UPDATE item
+SET item_bal = (item_bal + 5)
+WHERE item_type = 'Electrical';
+
+BOTTOM LOWER QUESTION
+Q1 
+
+SELECT item_name, invoice_date, item_price
+FROM item, invoice
+WHERE item.item_id = invoice.item_id AND item_price > 50.00 AND invoice_date > '2006-01-01';
+
+Q2
+
+SELECT item_name, item_price
+FROM item
+WHERE item_price > (SELECT AVG(item_price) FROM item)
+ORDER BY item_name, item_price DESC;
+
+SAND BOX AREA
+
+select * from item;
+select * from invoice;
+select * from buyer;
+
+SELECT item_id, SUM(invoice_qty)
+FROM invoice
+GROUP BY item_id;
+
+SELECT invoice.item_id, SUM(invoice.invoice_qty * item.item_price) AS FINAL_QTY
+FROM invoice, item
+WHERE invoice.item_id = item.item_id
+GROUP BY invoice.item_id;
+
+SELECT item_id from invoice group by item_id;
