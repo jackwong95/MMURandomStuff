@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1453881150 source:c:\users\jack\documents\mmurandomstuff\tcp1201 - oopds\labtest  notes\randominefficientusefulfunctions\main.cpp
+	<iostream>
+	<sstream>
+	<fstream>
+	<stdexcept>
+	<cstdlib>
+	<vector>
+	<algorithm>
+

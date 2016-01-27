@@ -1,0 +1,1 @@
+This sample project as been removed, as our main lecturer for OOPDS forbit us to upload any sort of source code thats related to OOPDS online. I don't feel like arguing so I'm gona remove it right now for simplicifty sake. Everything will be reuploaded after this semester.
