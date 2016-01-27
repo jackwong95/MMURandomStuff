@@ -169,7 +169,32 @@ class A
 {
     public:
         int dataz;
+        friend A operator* (A& a, A& e);
+        friend istream& operator>> (istream& is, A& k);
+        friend ostream& operator << (ostream& os, A const& k);
+        int getSeconz () {return seconz;}
+    private:
+        int seconz;
 };
+
+A operator* (A& lfs, A& rhs)
+{
+    A newA;
+    newA.seconz = lfs.seconz * rhs.seconz;
+    return newA;
+}
+
+istream& operator >> (istream& is, A& k)
+{
+    is >> k.seconz;
+    return is;
+}
+
+ostream& operator << (ostream& os, A const& k)
+{
+    os << k.seconz;
+    return os;
+}
 
 bool comparable(const A& lhs, const A& rhs)
 {
@@ -206,5 +231,11 @@ int main()
     sort(begin(sortedA), end(sortedA), comparable);
     insertAlphabetically(sortedA, 8);
     for(int i = 0; i < 10; i ++) cout << sortedA[i].dataz << endl;
+    A myA;
+    A myB;
+    cin >> myA;
+    cin >> myB;
+    A mynewVal = (myA*myB);
+    std::cout << mynewVal;
     return 0;
 }
