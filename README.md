@@ -10,4 +10,4 @@
 
 # WARNING
 
-You're allowed to copy, edit, or do anything that is under this repository. However I do not recommend anyone to do so, because you will not gain any knowledge from ctrl + c and v. ** cheating is bad :) **
+You're allowed to copy, edit, or do anything that is under this repository. However I do not recommend anyone to do so, because you will not gain any knowledge from ctrl + c and v. **cheating is bad :)**
