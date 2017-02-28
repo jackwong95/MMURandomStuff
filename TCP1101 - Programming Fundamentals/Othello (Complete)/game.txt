@@ -1,0 +1,14 @@
+=*******************~GAME MENU~*******************=
+
+1. ==> f 4		
+2. ==> menu		
+3. ==> next player	
+
+
+=*******************~EXTRAS~*******************=
+
+4. ==> Restart current tab
+5. ==> Select tab	
+6. ==> Resize current tab
+7. ==> Restart everything	
+8. ==> Clear Console		

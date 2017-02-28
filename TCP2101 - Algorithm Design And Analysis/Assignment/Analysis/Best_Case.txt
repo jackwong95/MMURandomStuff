@@ -1,0 +1,47 @@
+Naive String Search (Brute Force) vs Boyer-Moore-Horspool’s String Search
+
+Best Case Analysis using example
+
+1. Naive Method (Brute Force):
+
+	// Text: ABCABCABC, Pattern: 000
+
+	ABCABCABC
+	0 -> break, go next
+
+	ABCABCABC
+	 0 -> break, go next
+
+	ABCABCABC
+	  0 -> break, go next and so on.
+
+	This results in 7 comparisons,
+	which is 9 - 3 + 1 = 7 => n - m + 1 => n - m
+	Therefore, Omega(n)
+
+
+2. Boyer-Moore and Boyer-Moore-Horspool’s Method:
+
+	// Text: ABCABCABC, Pattern: 000
+
+	+------------+——-+——-+
+	| character  | 0 | * |
+	+------------+—--+---+
+	| skip value | 1 | 3 |
+	+------------+---+---+
+
+	// Table for pattern, 000.
+	// All other characters NOT 0 will be m, the length of the pattern, 3
+
+	ABCABCABC
+	  0 -> increment m times, 3
+
+	ABCABCABC
+	     0 -> increment 3
+
+	ABCABCABC
+	        0 -> increment 3
+
+	This results in 3 comparisons,
+	which is 9 / 3 = 3 => floor(n / m)
+	Therefore, Omega(n / m)

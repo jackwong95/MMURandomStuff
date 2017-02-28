@@ -1,0 +1,82 @@
+# depslib dependency file v1.0
+1437543394 source:c:\users\jack\documents\othello\main.cpp
+	<iostream>
+	"MenuManager.h"
+
+1437549876 source:c:\users\jack\documents\othello\board.cpp
+	"Board.h"
+
+1437471999 c:\users\jack\documents\othello\board.h
+	"cstddef"
+	<stdexcept>
+	<iostream>
+	<sstream>
+
+1437449111 c:\users\jack\documents\othello\menumanager.h
+	<locale>
+	"GameManager.h"
+
+1437552957 source:c:\users\jack\documents\othello\menumanager.cpp
+	"MenuManager.h"
+
+1437550240 source:c:\users\jack\documents\othello\printmanager.cpp
+	"PrintManager.h"
+
+1437449718 c:\users\jack\documents\othello\printmanager.h
+	"Board.h"
+
+1437220092 source:c:\users\jack\documents\othello\boardtype.cpp
+	"BoardType.h"
+
+1437221094 c:\users\jack\documents\othello\boardtype.h
+
+1437415051 c:\users\jack\documents\othello\gamemanager.h
+	"Board.h"
+	"PrintManager.h"
+	"MenuManager.h"
+	<stdlib.h>
+	<stdio.h>
+
+1437550517 source:c:\users\jack\documents\othello\gamemanager.cpp
+	"GameManager.h"
+
+1438230426 source:e:\othello\board.cpp
+	"Board.h"
+
+1438230417 e:\othello\board.h
+	"cstddef"
+	<stdexcept>
+	<iostream>
+	<sstream>
+
+1438231148 source:e:\othello\gamemanager.cpp
+	"GameManager.h"
+
+1438230528 e:\othello\gamemanager.h
+	"Board.h"
+	"PrintManager.h"
+	"MenuManager.h"
+	<stdlib.h>
+	<stdio.h>
+
+1438230649 e:\othello\printmanager.h
+	<fstream>
+	"Board.h"
+
+1438189915 e:\othello\menumanager.h
+	<locale>
+	<algorithm>
+	<vector>
+	"GameManager.h"
+
+1438231748 source:e:\othello\main.cpp
+	"MenuManager.h"
+	<iostream>
+	<windows.h>
+
+1438186394 source:e:\othello\menumanager.cpp
+	"MenuManager.h"
+
+1438230644 source:e:\othello\printmanager.cpp
+	"PrintManager.h"
+

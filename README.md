@@ -8,6 +8,12 @@
 
 4) This repository may contain wrong information especially my notes.
 
+
 # WARNING
 
 You're allowed to copy, edit, or do anything that is under this repository. However I do not recommend anyone to do so, because you will not gain any knowledge from ctrl + c and v. **cheating is bad :)**
+
+
+# CONTACT
+
+If you want to help contribute this repository by adding more things, then drop me an email - jackwongtiongkiat@gmail.com

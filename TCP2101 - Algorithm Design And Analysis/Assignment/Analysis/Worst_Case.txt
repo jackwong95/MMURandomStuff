@@ -1,0 +1,70 @@
+Naive String Search (Brute Force) vs Boyer-Moore-Horspool’s String Search
+
+Worst Case Analysis using Asymptotic Analysis
+
+Input:	text, n, pattern, m
+	text, the string to be checked
+	n, the length of text
+	pattern, the pattern to be found
+	m, the length of pattern
+
+
+1. Naive Method (Brute Force):
+
+	for i <- 0 to n-m do					n
+		j <- 0						n
+		for j to m-1 do					n * m
+			if text[i+j] != pattern[j] then	n * m
+				break				n
+		if j = m then					n
+			match					n
+								O(n * m)
+
+
+2. Boyer-Moore Method:
+
+	// Create last occurrence table.
+	for i <- 0 to m-1 do					m
+		table[pattern[i] <- i				m
+	table[others] <- -1
+
+	i <- m-1						1
+	j <- m-1						1
+
+	while i < n do						n
+		if text[i] = pattern[j] then			n
+			if j = 0 then				n
+				match				n
+			else					n
+				i <- i - 1			n * m
+				j <- j - 1			n * m
+		else						n
+			i = i + m - min(j, table[text[i]]+1)	n
+			j = m - 1				n
+								O(n * m)
+
+
+3. Boyer-Moore-Horspool Method:
+
+	// Create a mismatch table.
+	for i <- 0 to m-2 do					m
+		table[pattern[i]] <- m-i-1			m
+	table[others] <- m					
+
+	
+	i <- m-1						1
+	while i < n do						n
+		t <- m-1					n
+		for j <- i to i-m+1 do				n * m
+			if text[j] != pattern[t] then 		n * m
+				break				n
+			t <- t - 1				n * m
+		if t = -1 then					n
+			match					n
+		i <- i + table[text[i]]			n
+								O(n * m)
+
+
+
+Therefore, we can conclude that Boyer-Moore-Horspool’s worst case is as bad as the naive method.
+Boyer-Moore-Horspool’s algorithm would cost more operations and memory for the need of constructing the mismatch table.
